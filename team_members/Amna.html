@@ -62,15 +62,39 @@
 
     <div class="section">
       <h2>Backtracking</h2>
-      <p>Backtracking is used to solve problems .</p>
+      <p>Backtracking is used to solve problems by incrementally building candidates for solutions and abandoning partial candidates when it determines that they cannot be completed into valid solutions.</p>
       <ul>
-        <li><span class="highlight">General Algorithm:</span> It is a general algorithm for finding all (or some) solutions to some computational
-problem, that incrementally builds candidates to the solutions, and abandons each
-partial candidate c ("backtracks") as soon as it determines that c cannot possibly be
-completed to a valid solution..</li>
+        <li><span class="highlight">General Algorithm:</span> It is a general algorithm for finding all (or some) solutions to some computational problems, that incrementally builds candidates to the solutions, and abandons each partial candidate <span class="highlight">c</span> ("backtracks") as soon as it determines that <span class="highlight">c</span> cannot possibly be completed to a valid solution.</li>
       </ul>
+    </div>
+
+    <div class="section">
+      <h2>Time and Space Efficiency</h2>
+      <p>Time and space efficiency are critical when designing algorithms, especially as input sizes grow. Here's why they matter:</p>
+      <ul>
+        <li><span class="highlight">Time Efficiency:</span> How fast an algorithm runs. Time efficiency ensures that algorithms run quickly, even with large inputs, by minimizing the number of operations executed.</li>
+        <li><span class="highlight">Space Efficiency:</span> Extra space the algorithm requires. Space efficiency minimizes memory consumption, making algorithms suitable for systems with limited resources.</li>
+        <li>Both time and space are measured relative to input size, ensuring algorithms scale well.</li>
+        <li>The efficiency of an algorithm can vary based on input, so we analyze the best, average, and worst cases to understand its performance in different scenarios.</li>
+        <li>The <span class="highlight">order of growth</span> (e.g., Big O notation) helps predict an algorithm's performance and choose the most efficient one for the task.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Time Complexity Classes</h2>
+      <p>Time complexity defines how the runtime of an algorithm scales with the size of the input. Here are some common time complexities:</p>
+      <ul>
+        <li><span class="highlight">Constant Time O(1):</span> The runtime remains the same regardless of the input size.</li>
+        <li><span class="highlight">Logarithmic Time O(log n):</span> The runtime grows slowly, increasing logarithmically as the input size grows, often seen in binary search.</li>
+        <li><span class="highlight">Linear Time O(n):</span> The runtime increases proportionally to the input size, common in simple loops.</li>
+        <li><span class="highlight">Linearithmic Time O(n log n):</span> The runtime grows faster than linear but slower than quadratic.</li>
+        <li><span class="highlight">Quadratic Time O(n²):</span> The runtime grows quadratically, often in nested loops.</li>
+        <li><span class="highlight">Cubic Time O(n³):</span> The runtime increases even more steeply than quadratic.</li>
+        <li><span class="highlight">Exponential Time O(2ⁿ):</span> The runtime grows exponentially, with each additional input, typical of brute-force solutions.</li>
+        <li><span class="highlight">Factorial Time O(n!):</span> The runtime grows extremely fast, seen in problems with extensive permutations.</li>
+      </ul>
+      <p>Each class reflects how the algorithm's efficiency scales, helping determine its practicality for large inputs.</p>
     </div>
   </div>
 </body>
 </html>
-
