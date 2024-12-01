@@ -3,41 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Learning Reflections</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        h1, h2 {
-            text-align: center;
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 1.2em;
+            margin-top: 20px;
         }
         ul {
-            list-style-type: none;
-            padding: 0;
+            margin: 10px 0 20px 20px;
         }
         li {
             margin-bottom: 10px;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #2c3e50;
+            color: #fff;
+        }
+        .formula {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #eaf2f8;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .content-section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
-    <h1>Course Learning Reflections</h1>
+   
 
-    <h2>Types of Problems in Nature</h2>
-    <ul>
-        <li><strong>Iteration</strong>: Repeating a process a certain number of times. Example: Looping through a list of items.</li>
-        <li><strong>Recursion</strong>: Breaking down a problem into smaller, self-similar subproblems. Example: Calculating factorial.</li>
-        <li><strong>Backtracking</strong>: Trying different solutions and undoing them if they don't work. Example: Solving a maze.</li>
-    </ul>
+    <div class="content-section">
+        <h2>1. Kinds of Problems in Nature (Iteration, Recursion, Backtracking)</h2>
+        <ul>
+            <li><strong>Iteration:</strong> Repeatedly perform a set of operations until a condition is met. <br> Example: Summing an array. <br> <span class="formula">T(n) = c * n</span>, where <em>c</em> is a constant.</li>
+            <li><strong>Recursion:</strong> Solving a problem by breaking it into smaller subproblems that resemble the original. <br> Example: Fibonacci sequence. <br> <span class="formula">T(n) = T(n-1) + T(n-2) + O(1)</span>.</li>
+            <li><strong>Backtracking:</strong> Exploring all possible solutions and abandoning paths that don’t lead to solutions. <br> Example: N-Queens problem. <br> Worst-case <span class="formula">T(n) = O(k^n)</span>, where <em>k</em> is the branching factor.</li>
+        </ul>
+    </div>
 
-    <h2>Space and Time Efficiency</h2>
-    <ul>
-        <li><strong>Space Efficiency</strong>: How much memory a program uses.</li>
-        <li><strong>Time Efficiency</strong>: How fast a program runs.</li>
-        <li>These are important because they determine how well a program performs, especially for large datasets.</li>
-        <li>Different classes of problems have different growth rates (e.g., linear, logarithmic, exponential), which affect their efficiency.</li>
-    </ul>
+    <div class="content-section">
+        <h2>2. Space and Time Efficiency</h2>
+        <ul>
+            <li><strong>Space Efficiency:</strong> Measures how much memory an algorithm uses. <br> Example: Recursive functions use a call stack.</li>
+            <li><strong>Time Efficiency:</strong> Measures how long an algorithm takes to execute. <br> Example: Sorting an array takes <span class="formula">O(n log n)</span> in merge sort.</li>
+            <li><strong>Importance:</strong> Efficient algorithms are critical for scalability and help prevent memory overflows and speed bottlenecks.</li>
+        </ul>
+        
+        <h3>Orders of Growth:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Class of Problems</th>
+                    <th>Order of Growth</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Constant</td>
+                    <td><span class="formula">O(1)</span></td>
+                    <td>Accessing array element</td>
+                </tr>
+                <tr>
+                    <td>Logarithmic</td>
+                    <td><span class="formula">O(log n)</span></td>
+                    <td>Binary search</td>
+                </tr>
+                <tr>
+                    <td>Linear</td>
+                    <td><span class="formula">O(n)</span></td>
+                    <td>Linear search</td>
+                </tr>
+                <tr>
+                    <td>Quadratic</td>
+                    <td><span class="formula">O(n^2)</span></td>
+                    <td>Bubble sort</td>
+                </tr>
+                <tr>
+                    <td>Exponential</td>
+                    <td><span class="formula">O(2^n)</span></td>
+                    <td>Subset generation</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    </body>
-</html>
+    <div class="content-section">
+        <h2>3. Takeaways from Chapter 2 (Design Principles)</h2>
+        <ul>
+            <li><strong>Divide and Conquer:</strong> Split the problem, solve smaller parts, and combine.</li>
+            <li><strong>Greedy Algorithms:</strong> Make the locally optimal choice at each step.</li>
+            <li><strong>Dynamic Programming:</strong> Solve overlapping subproblems and store results.</li>
+            <li><strong>Backtracking:</strong> Abandon partial solutions that fail.</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>4. Hierarchical Data and Trees</h2>
+        <ul>
+            <li><strong>Binary Search Tree (BST):</strong> O(log n) search/insert/delete for balanced BST.</li>
+            <li><strong>AVL Tree:</strong> Self-balancing BST with <span class="formula">O(log n)</span> operations.</li>
+            <li><strong>Red-Black Tree:</strong> Guarantees balancing with fewer rotations than AVL.</li>
+            <li><strong>Trie:</strong> Efficient for prefix-based searches.</li>
+            <li><strong>Heap:</strong> Priority queue implementation, <span class="formula">O(log n)</span> insert/extract.</li>
+        </ul>
+
+        <h3>Applications:</h3>
+        <ul>
+            <li><strong>BST:</strong> Database indexing.</li>
+            <li><strong>Trie:</strong> Autocomplete systems.</li>
+            <li><strong>Heap:</strong> Priority scheduling.</li>
+            <li><strong>Red-Black Tree:</strong> Associative containers like `std::map`.</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>5. Array Query Algorithms</h2>
+        <ul>
+            <li><strong>Need:</strong> Efficiently solve range queries and updates.</li>
+            <li><strong>Prefix Sum:</strong> Fast range sum queries. Formula: <span class="formula">S[j] - S[i-1]</span>.</li>
+            <li><strong>Segment Tree:</strong> Range queries and updates in <span class="formula">O(log n)</span>.</li>
+            <li><strong>Fenwick Tree:</strong> Efficient for cumulative frequency queries.</li>
+        </ul>
+
+        
+        <ul>
+            
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>6. Tree vs Graph</h2>
+        <ul>
+            <li><strong>Tree:</strong> Hierarchical, acyclic structure. Traversals: Preorder, Inorder, Postorder. <br> Applications: Expression evaluation, hierarchical data modeling.</li>
+            <li><strong>Graph:</strong> Nodes connected arbitrarily with cycles allowed. Traversals: BFS, DFS. <br> Applications: Network routing, dependency resolution.</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>7. Sorting and Searching Algorithms</h2>
+        <h3>Sorting:</h3>
+        <ul>
+            <li><strong>Bubble Sort:</strong> <span class="formula">O(n^2)</span>, basic sorting.</li>
+            <li><strong>Merge Sort:</strong> <span class="formula">O(n log n)</span>, divide and conquer.</li>
+            <li><strong>Quick Sort:</strong> <span class="formula">O(n log n)</span> average case, <span class="formula">O(n^2)</span> worst case.</li>
+        </ul>
+
+        <h3>Searching:</h3>
+        <ul>
+            <li><strong>Linear Search:</strong> <span class="formula">O(n)</span>, scans sequentially.</li>
+            <li><strong>Binary Search:</strong> <span class="formula">O(log n)</span>, requires sorted array.</li>
+        </ul>
+
+       
