@@ -6,27 +6,74 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Button Styling */
+        .button-container a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .button-container a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Align buttons side by side */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Hello, I'm Amana👋</h1>
+        <h1>Hello, I'm Amana 👋</h1>
         <p>I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
-      <a id="team" href="team_members/Amna.html" >Business cases by amna</a>
-        <a id="team" href="team_members/Nayeem.html" >Business cases by Nayeem</a>
-        <a id="team" href="team_members/Sauda.html" >Business cases by Sauda</a>
-        <a id="team" href="team_members/sabiha.html" >Business cases by Sabiha</a>
+        <div class="button-container">
+            <a href="team_members/Amna.html">Business cases by Amna</a>
+            <a href="team_members/Nayeem.html">Business cases by Nayeem</a>
+            <a href="team_members/Sauda.html">Business cases by Sauda</a>
+            <a href="team_members/Sabiha.html">Business cases by Sabiha</a>
+        </div>
     </header>
 
     <section>
         <h2>🛠️ Projects</h2>
         <ul>
-            <img src="portfolio-daa/assets/new_project.jpg" alt="A beautiful landscape" width="600" height="400">
-            <li><strong>Project 1:The Smart City  </strong></li>
-            <li><strong>This is India's new city <span style="font-size: 1.2em;">'Suryapath'</span>
-            <li>Suryapath, India's newest and most innovative smart city. Located adjacent to the historic city of Kolhapur, future living environment. The city boasts state-of-the-art infrastructure, green energy solutions, and smart systems for transportation, healthcare, and education, ensuring a high quality of life for its residents. Designed to harmonize with its cultural surroundings. </strong></li>
+            <!-- Home Page Section -->
+            <li>
+                <br>
+                <a href="course_about.html">
+                    <img src="https://www.equans.com/sites/g/files/tkmtob111/files/styles/coh_large_landscape/public/2022-09/AdobeStock_208513158-[Converti].png?h=f4144f50&itok=wt5WJE-m" alt="Home Page Thumbnail" style="width:800px; height:auto; margin-top: 10px;">
+                </a>
+                <p>Explore the following:</p>
+                <div class="button-container">
+                    <a href="course_about.html">course overview</a>
+                    <a href="syllabus.html">studied concepts</a>
+                    <a href="resources.html">Real-time Application</a>
+                </div>
+            </li>
+
+            <!-- Project 1 Section -->
+            <li><strong>Project 1: The Smart City</strong></li>
+            <li>
+                <strong>This is India's new city <span style="font-size: 1.2em;">'Suryapath'</span></strong>
+            </li>
+            <li>
+                Suryapath, India's newest and most innovative smart city. Located adjacent to the historic city of Kolhapur, future living environment. 
+                The city boasts state-of-the-art infrastructure, green energy solutions, and smart systems for transportation, healthcare, and education, ensuring 
+                a high quality of life for its residents. Designed to harmonize with its cultural surroundings.
+            </li>
             <a id="description" href="description_intro/description.html">Detail Description</a>
         </ul>
-        
+
         <ul>
             <li>C++, Python, JavaScript</li>
             <li>Data Structures and Algorithms</li>
