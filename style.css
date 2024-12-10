@@ -1,115 +1,1040 @@
-/* Reset default margin and padding */
+/* ========== RESET STYLES ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Global Styles */
+/* ========== GLOBAL STYLES ========== */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f5f5f5;
     margin: 0;
-    padding: 20px; /* Adding padding to the body to prevent sticking at the top */
+    padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Aligns content towards the top */
+    align-items: flex-start;
     min-height: 100vh;
+    color: #333;
 }
 
-/* Main Container */
+/* ========== MAIN CONTAINER ========== */
 section {
-    background-color: white;
-    padding: 2rem;
+    background-color: #ffffff;
+    padding: 3rem 2rem;
     width: 90%;
-    max-width: 800px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    max-width: 900px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
     text-align: center;
-    margin-top: 30px; /* Adding margin to ensure there's space from the top */
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Header */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== HEADER STYLES ========== */
 header {
-    background-color: #4CAF50;
+    background-color: #007BFF;
     color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2rem;
-    margin: 0;
-}
-
-header p {
-    margin: 1rem 0 0;
-}
-
-/* Section Titles */
-h2 {
-    color: #4CAF50;
+    font-size: 2.5rem;
+    font-weight: bold;
     margin-bottom: 1rem;
 }
 
-/* List Items */
-ul {
-    list-style: none;
-    padding: 0;
+header p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
 }
 
-ul li {
-    background-color: #e7f7e7;
-    margin-bottom: 0.5rem;
-    padding: 0.75rem;
+/* ========== SECTION TITLES ========== */
+h2 {
+    color: #007BFF;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #007BFF;
+    margin: 0.5rem auto;
     border-radius: 5px;
 }
 
-/* Links */
-a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
+/* ========== LIST STYLING ========== */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
 }
 
-a:hover {
+ul li {
+    background-color: #e9f5ff;
+    color: #333;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+ul li:hover {
+    background-color: #d4eaff;
+}
+
+ul li a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ul li a:hover {
     text-decoration: underline;
 }
 
-/* Definition List */
+/* ========== BUTTON STYLING ========== */
+.button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-container a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 1.5rem;
+}
+
+/* ========== LINKS STYLING ========== */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* ========== DEFINITION LIST ========== */
 dl dt {
     font-weight: bold;
-    color: #333;
+    color: #007BFF;
     margin-top: 1rem;
+    font-size: 1.1rem;
 }
 
 dl dd {
     margin-left: 1.5rem;
-    color: #666;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Blockquote */
+/* ========== BLOCKQUOTE STYLING ========== */
 blockquote {
     font-style: italic;
     color: #555;
-    border-left: 4px solid #4CAF50;
-    padding-left: 1rem;
+    border-left: 5px solid #007BFF;
+    padding-left: 1.5rem;
     margin-top: 2rem;
+    background-color: #f8f9fa;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
-/* Responsive Design */
+/* ========== IMAGE STYLING ========== */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* ========== FORMATTING FOR THE TEAM SECTION ========== */
+#team {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .button-container a {
+        padding: 8px 16px;
+    }
+}
+
 @media (max-width: 600px) {
     section {
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
     }
 
     header {
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container a {
+        width: 100%;
+        text-align: center;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+/* ========== RESET STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== GLOBAL STYLES ========== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* ========== MAIN CONTAINER ========== */
+section {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== HEADER STYLES ========== */
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+/* ========== SECTION TITLES ========== */
+h2 {
+    color: #007BFF;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #007BFF;
+    margin: 0.5rem auto;
+    border-radius: 5px;
+}
+
+/* ========== LIST STYLING ========== */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+ul li {
+    background-color: #e9f5ff;
+    color: #333;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+ul li:hover {
+    background-color: #d4eaff;
+}
+
+ul li a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ========== BUTTON STYLING ========== */
+.button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-container a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 1.5rem;
+}
+
+/* ========== LINKS STYLING ========== */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* ========== DEFINITION LIST ========== */
+dl dt {
+    font-weight: bold;
+    color: #007BFF;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+dl dd {
+    margin-left: 1.5rem;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ========== BLOCKQUOTE STYLING ========== */
+blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 5px solid #007BFF;
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+    background-color: #f8f9fa;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* ========== IMAGE STYLING ========== */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* ========== FORMATTING FOR THE TEAM SECTION ========== */
+#team {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .button-container a {
+        padding: 8px 16px;
     }
 }
 
-#team{
-    background-color:white;
-    
+@media (max-width: 600px) {
+    section {
+        padding: 2rem 1.5rem;
+    }
+
+    header {
+        padding: 2rem 1.5rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container a {
+        width: 100%;
+        text-align: center;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+/* ========== RESET STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== GLOBAL STYLES ========== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* ========== MAIN CONTAINER ========== */
+section {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== HEADER STYLES ========== */
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+/* ========== SECTION TITLES ========== */
+h2 {
+    color: #007BFF;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #007BFF;
+    margin: 0.5rem auto;
+    border-radius: 5px;
+}
+
+/* ========== LIST STYLING ========== */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+ul li {
+    background-color: #e9f5ff;
+    color: #333;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+ul li:hover {
+    background-color: #d4eaff;
+}
+
+ul li a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ========== BUTTON STYLING ========== */
+.button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-container a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 1.5rem;
+}
+
+/* ========== LINKS STYLING ========== */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* ========== DEFINITION LIST ========== */
+dl dt {
+    font-weight: bold;
+    color: #007BFF;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+dl dd {
+    margin-left: 1.5rem;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ========== BLOCKQUOTE STYLING ========== */
+blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 5px solid #007BFF;
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+    background-color: #f8f9fa;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* ========== IMAGE STYLING ========== */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* ========== FORMATTING FOR THE TEAM SECTION ========== */
+#team {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .button-container a {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 2rem 1.5rem;
+    }
+
+    header {
+        padding: 2rem 1.5rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container a {
+        width: 100%;
+        text-align: center;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+/* ========== RESET STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== GLOBAL STYLES ========== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* ========== MAIN CONTAINER ========== */
+section {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== HEADER STYLES ========== */
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+/* ========== SECTION TITLES ========== */
+h2 {
+    color: #007BFF;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #007BFF;
+    margin: 0.5rem auto;
+    border-radius: 5px;
+}
+
+/* ========== LIST STYLING ========== */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+ul li {
+    background-color: #e9f5ff;
+    color: #333;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+ul li:hover {
+    background-color: #d4eaff;
+}
+
+ul li a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ========== BUTTON STYLING ========== */
+.button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-container a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 1.5rem;
+}
+
+/* ========== LINKS STYLING ========== */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* ========== DEFINITION LIST ========== */
+dl dt {
+    font-weight: bold;
+    color: #007BFF;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+dl dd {
+    margin-left: 1.5rem;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ========== BLOCKQUOTE STYLING ========== */
+blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 5px solid #007BFF;
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+    background-color: #f8f9fa;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* ========== IMAGE STYLING ========== */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* ========== FORMATTING FOR THE TEAM SECTION ========== */
+#team {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .button-container a {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 2rem 1.5rem;
+    }
+
+    header {
+        padding: 2rem 1.5rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container a {
+        width: 100%;
+        text-align: center;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
+        padding: 1rem;
+    }
 }
