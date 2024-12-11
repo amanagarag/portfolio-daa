@@ -3,187 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Learning Reflections</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
         }
-        h1, h2, h3 {
-            color: #2c3e50;
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
         }
-        h1 {
-            font-size: 2em;
-            margin-bottom: 20px;
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
         }
         h2 {
-            font-size: 1.5em;
-            margin-top: 30px;
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
         }
         h3 {
-            font-size: 1.2em;
+            color: #333;
             margin-top: 20px;
+            font-size: 1.5rem;
         }
         ul {
-            margin: 10px 0 20px 20px;
+            list-style: disc;
+            padding-left: 20px;
         }
         li {
             margin-bottom: 10px;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            margin-bottom: 20px;
+        p {
+            margin-bottom: 15px;
         }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #2c3e50;
-            color: #fff;
-        }
-        .formula {
-            font-family: "Courier New", Courier, monospace;
-            background-color: #eaf2f8;
-            padding: 5px;
-            border-radius: 5px;
-        }
-        .content-section {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
         }
     </style>
 </head>
 <body>
-   
+    <header>
+        <h1>Course Learning Reflections</h1>
+    </header>
 
-    <div class="content-section">
-        <h2>1. Kinds of Problems in Nature (Iteration, Recursion, Backtracking)</h2>
+    <!-- Topic 1 -->
+    <section>
+        <h2>1. What are the kinds of problems we see in the nature? (iteration, recursion, backtracking)</h2>
         <ul>
-            <li><strong>Iteration:</strong> Repeatedly perform a set of operations until a condition is met. <br> Example: Summing an array. <br> <span class="formula">T(n) = c * n</span>, where <em>c</em> is a constant.</li>
-            <li><strong>Recursion:</strong> Solving a problem by breaking it into smaller subproblems that resemble the original. <br> Example: Fibonacci sequence. <br> <span class="formula">T(n) = T(n-1) + T(n-2) + O(1)</span>.</li>
-            <li><strong>Backtracking:</strong> Exploring all possible solutions and abandoning paths that don’t lead to solutions. <br> Example: N-Queens problem. <br> Worst-case <span class="formula">T(n) = O(k^n)</span>, where <em>k</em> is the branching factor.</li>
+            <li><strong>Iteration:</strong> Repeating instructions until a condition is met, such as looping through an array.</li>
+            <li><strong>Recursion:</strong> Breaking problems into smaller subproblems, like calculating factorials or solving the Tower of Hanoi.</li>
+            <li><strong>Backtracking:</strong> Incrementally exploring solutions and abandoning invalid paths, used in N-Queens or maze problems.</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="content-section">
-        <h2>2. Space and Time Efficiency</h2>
+    <!-- Topic 2 -->
+    <section>
+        <h2>2. What is space and time efficiency? Why are they important? </h2>
         <ul>
-            <li><strong>Space Efficiency:</strong> Measures how much memory an algorithm uses. <br> Example: Recursive functions use a call stack.</li>
-            <li><strong>Time Efficiency:</strong> Measures how long an algorithm takes to execute. <br> Example: Sorting an array takes <span class="formula">O(n log n)</span> in merge sort.</li>
-            <li><strong>Importance:</strong> Efficient algorithms are critical for scalability and help prevent memory overflows and speed bottlenecks.</li>
+            <li><strong>Space Efficiency:</strong> The memory an algorithm requires.</li>
+            <li><strong>Time Efficiency:</strong> The execution time of an algorithm.</li>
+            <li><strong>Importance:</strong> Ensures better performance, especially for large-scale problems.</li>
+            <li><strong>Classes of Problems:</strong></li>
+            <ul>
+                <li><strong>P:</strong> Problems solvable in polynomial time.</li>
+                <li><strong>NP:</strong> Problems verifiable in polynomial time.</li>
+                <li><strong>NP-Hard/NP-Complete:</strong> Challenging problems verifiable if a solution exists.</li>
+            </ul>
+            <li><strong>Orders of Growth:</strong> O(1), O(log n), O(n), O(n²), O(2ⁿ).</li>
         </ul>
-        
-        <h3>Orders of Growth:</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Class of Problems</th>
-                    <th>Order of Growth</th>
-                    <th>Example</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Constant</td>
-                    <td><span class="formula">O(1)</span></td>
-                    <td>Accessing array element</td>
-                </tr>
-                <tr>
-                    <td>Logarithmic</td>
-                    <td><span class="formula">O(log n)</span></td>
-                    <td>Binary search</td>
-                </tr>
-                <tr>
-                    <td>Linear</td>
-                    <td><span class="formula">O(n)</span></td>
-                    <td>Linear search</td>
-                </tr>
-                <tr>
-                    <td>Quadratic</td>
-                    <td><span class="formula">O(n^2)</span></td>
-                    <td>Bubble sort</td>
-                </tr>
-                <tr>
-                    <td>Exponential</td>
-                    <td><span class="formula">O(2^n)</span></td>
-                    <td>Subset generation</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    </section>
 
-    <div class="content-section">
-        <h2>3. Takeaways from Chapter 2 (Design Principles)</h2>
+    <!-- Topic 3 -->
+    <section>
+        <h2>3. Takeaways from Design Principles</h2>
         <ul>
-            <li><strong>Divide and Conquer:</strong> Split the problem, solve smaller parts, and combine.</li>
-            <li><strong>Greedy Algorithms:</strong> Make the locally optimal choice at each step.</li>
-            <li><strong>Dynamic Programming:</strong> Solve overlapping subproblems and store results.</li>
-            <li><strong>Backtracking:</strong> Abandon partial solutions that fail.</li>
+            <li><strong>Divide-and-Conquer:</strong> Breaking problems into subproblems, solving independently, and combining results.</li>
+            <li><strong>Greedy Approach:</strong> Making locally optimal choices (e.g., Prim's and Kruskal's algorithms).</li>
+            <li><strong>Dynamic Programming:</strong> Solving overlapping subproblems by storing solutions (e.g., Knapsack problem).</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="content-section">
-        <h2>4. Hierarchical Data and Trees</h2>
+    <!-- Topic 4 -->
+    <section>
+        <h2>4. Tree Data Structures</h2>
         <ul>
-            <li><strong>Binary Search Tree (BST):</strong> O(log n) search/insert/delete for balanced BST.</li>
-            <li><strong>AVL Tree:</strong> Self-balancing BST with <span class="formula">O(log n)</span> operations.</li>
-            <li><strong>Red-Black Tree:</strong> Guarantees balancing with fewer rotations than AVL.</li>
-            <li><strong>Trie:</strong> Efficient for prefix-based searches.</li>
-            <li><strong>Heap:</strong> Priority queue implementation, <span class="formula">O(log n)</span> insert/extract.</li>
+            <li><strong>Binary Tree:</strong> Simple hierarchical representation.</li>
+            <li><strong>BST:</strong> Efficient search, insert, delete operations.</li>
+            <li><strong>AVL Tree:</strong> Self-balancing BST for optimized operations.</li>
+            <li><strong>Heap:</strong> Used in priority queues and heapsort.</li>
+            <li><strong>Trie:</strong> Efficient for string matching and prefix searches.</li>
         </ul>
+    </section>
 
-        <h3>Applications:</h3>
-        <ul>
-            <li><strong>BST:</strong> Database indexing.</li>
-            <li><strong>Trie:</strong> Autocomplete systems.</li>
-            <li><strong>Heap:</strong> Priority scheduling.</li>
-            <li><strong>Red-Black Tree:</strong> Associative containers like `std::map`.</li>
-        </ul>
-    </div>
-
-    <div class="content-section">
+    <!-- Topic 5 -->
+    <section>
         <h2>5. Array Query Algorithms</h2>
+        <p>Array query algorithms enable efficient data retrieval and updates, optimizing operations for large datasets.</p>
         <ul>
-            <li><strong>Need:</strong> Efficiently solve range queries and updates.</li>
-            <li><strong>Prefix Sum:</strong> Fast range sum queries. Formula: <span class="formula">S[j] - S[i-1]</span>.</li>
-            <li><strong>Segment Tree:</strong> Range queries and updates in <span class="formula">O(log n)</span>.</li>
-            <li><strong>Fenwick Tree:</strong> Efficient for cumulative frequency queries.</li>
+            <li>Applications: Range queries, prefix sums.</li>
+            <li>Dynamic range queries: Segment trees and Fenwick trees.</li>
         </ul>
+    </section>
 
-        
+    <!-- Topic 6 -->
+    <section>
+        <h2>6. Trees vs. Graphs</h2>
         <ul>
-            
+            <li><strong>Trees:</strong> Acyclic, connected graphs with hierarchical structure. Traversals: Preorder, Inorder, Postorder.</li>
+            <li><strong>Graphs:</strong> Network of nodes and edges. Can have cycles. Traversals: Depth First Search (DFS), Breadth First Search (BFS).</li>
+            <li><strong>Applications:</strong></li>
+            <ul>
+                <li>Trees: File systems, hierarchical databases.</li>
+                <li>Graphs: Network routing, social connections.</li>
+            </ul>
         </ul>
-    </div>
+    </section>
 
-    <div class="content-section">
-        <h2>6. Tree vs Graph</h2>
-        <ul>
-            <li><strong>Tree:</strong> Hierarchical, acyclic structure. Traversals: Preorder, Inorder, Postorder. <br> Applications: Expression evaluation, hierarchical data modeling.</li>
-            <li><strong>Graph:</strong> Nodes connected arbitrarily with cycles allowed. Traversals: BFS, DFS. <br> Applications: Network routing, dependency resolution.</li>
-        </ul>
-    </div>
-
-    <div class="content-section">
+    <!-- Topic 7 -->
+    <section>
         <h2>7. Sorting and Searching Algorithms</h2>
-        <h3>Sorting:</h3>
+        <h3>Sorting</h3>
         <ul>
-            <li><strong>Bubble Sort:</strong> <span class="formula">O(n^2)</span>, basic sorting.</li>
-            <li><strong>Merge Sort:</strong> <span class="formula">O(n log n)</span>, divide and conquer.</li>
-            <li><strong>Quick Sort:</strong> <span class="formula">O(n log n)</span> average case, <span class="formula">O(n^2)</span> worst case.</li>
+            <li>Merge Sort: O(n log n), divide and conquer approach.</li>
+            <li>Quick Sort: O(n log n) average case, O(n²) worst case.</li>
         </ul>
-
-        <h3>Searching:</h3>
+        <h3>Searching</h3>
         <ul>
-            <li><strong>Linear Search:</strong> <span class="formula">O(n)</span>, scans sequentially.</li>
-            <li><strong>Binary Search:</strong> <span class="formula">O(log n)</span>, requires sorted array.</li>
+            <li>Linear Search: O(n), sequential scan.</li>
+            <li>Binary Search: O(log n), works on sorted data.</li>
         </ul>
+    </section>
 
-       
+    <!-- Topic 8 -->
+    <section>
+        <h2>8. Importance of Graph Algorithms</h2>
+        <ul>
+            <li><strong>Spanning Trees:</strong> Connect all vertices with minimal weight (e.g., Prim's or Kruskal's).</li>
+            <li><strong>Shortest Paths:</strong> Algorithms like Dijkstra's and Bellman-Ford.</li>
+            <ul>
+                <li>Dijkstra's Algorithm: Dijkstra's algorithm like finding the quickest route to all destinations from a starting 
+point, but only for roads that have non-negative speed limits (no "negative" roads). 
+You start at your starting point, look at all the nearby destinations, and pick the 
+closest one. Then, from there, you look at the next closest destination and keep going. 
+It’s a bit like how a GPS works, constantly recalculating the shortest route as you 
+travel.</li>
+                <li>Bellman-Ford Algorithm: Bellman-Ford is like Dijkstra's algorithm but with a superpower: it can handle roads with negative speed limits (or negative weights). However, it’s a bit slower because it needs to check every possible route multiple times to make sure it’s found the shortest path. It’s also capable of detecting situations where a "negative loop" exists, where you could keep going around in a cycle and continuously get closer to the destination.</li>
+                <li>Floyd-Warshall Algorithm: Imagine you want to know the shortest path between every pair of places in a town, not just from one starting point. Floyd-Warshall does this by checking all possible pairs of places, and updating the shortest distance between them step by step, kind of like trying every possible route between two cities, one at a time, to make sure you’re taking the fastest option</li>
+            </ul>
+        </ul>
+    </section>
+
+    <!-- Topic 9 -->
+    <section>
+        <h2>9. Algorithm Design Techniques</h2>
+        <ul>
+            <li><strong>Greedy:</strong> Suitable for optimization problems.</li>
+            <li><strong>Divide-and-Conquer:</strong> Effective for problems like sorting and matrix multiplication.</li>
+            <li><strong>Dynamic Programming:</strong> Best for problems with overlapping subproblems.</li>
+            <li><strong>Backtracking:</strong> Useful for exploring multiple possibilities in puzzles.</li>
+        </ul>
+    </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <h1>Business cases</h1
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapping Business Solutions to SDG Targets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        h3 {
+            color: #333;
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mapping Business Solutions to SDG Targets and Indicators</h1>
+    </header>
+
+    <section>
+        <h2>Smart City Infrastructure Development</h2>
+        <h3>SDG 11.3: Enhance inclusive and sustainable urbanization</h3>
+        <p><strong>Indicator 11.3.2:</strong> Proportion of cities with a direct participation structure of civil society in urban planning.</p>
+        <p>This case focuses on creating cities where the community is actively involved in urban planning. It ensures that citizens have a direct say in how their city develops, making urbanization more inclusive and sustainable. Ensuring that all citizens have a voice in how their cities grow. It involves using technology and smart solutions to enhance urban living, from transportation to energy use, while actively engaging communities in decision-making.</p>
+    </section>
+
+    <section>
+        <h2>Renewable Energy System for Manufacturing Plant</h2>
+        <h3>SDG 11.6: Reduce the adverse environmental impact of cities</h3>
+        <p><strong>Indicator 11.6.2:</strong> Annual mean levels of fine particulate matter (e.g., PM2.5 and PM10) in cities.</p>
+        <p>This use case focuses on using clean energy to power factories, reducing pollution and harmful emissions. This helps lower air pollution in cities by decreasing fine particulate matter (like PM2.5 and PM10), contributing to a cleaner environment.</p>
+    </section>
+
+    <section>
+        <h2>AI-Driven Predictive Maintenance in Manufacturing</h2>
+        <h3>SDG 11.b: Implement integrated policies for climate resilience</h3>
+        <p><strong>Indicator 11.b.2:</strong> Proportion of local governments adopting local disaster risk reduction strategies.</p>
+        <p>This use case focuses on using AI to prevent machine breakdowns and improve efficiency. It helps factories stay prepared for disruptions, supporting disaster risk management and climate resilience by identifying and addressing potential risks early.</p>
+    </section>
+  
+</body>
+</html>
