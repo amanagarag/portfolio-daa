@@ -1,1 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature-Inspired Problems and Solutions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #4CAF50;
+    }
+    .content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    li {
+      margin: 5px 0;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .highlight {
+      color: #d9534f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Nature-Inspired Problems and Solutions</h1>
 
+    <!-- Iteration Section -->
+    <div class="section">
+      <h2>Iteration</h2>
+      <p>In nature, iteration often occurs when processes are repeated until a desired goal is reached. To solve iteration-related problems, we use algorithms that perform repeated operations.</p>
+      <ul>
+        <li><span class="highlight">Sorting Algorithms:</span> Iterative sorting methods like bubble sort, insertion sort, or selection sort repeat operations to organize data.</li>
+      </ul>
+    </div>
+
+    <!-- Recursion Section -->
+    <div class="section">
+      <h2>Recursion</h2>
+      <p>In recursion, problems are solved by breaking them down into smaller subproblems of the same type. This method often involves a base case to stop the recursion.</p>
+      <ul>
+        <li><span class="highlight">Factorial Calculation:</span> <code>n! = n × (n-1)!</code>, with <code>1! = 1</code> as the base case.</li>
+        <li><span class="highlight">Fibonacci Sequence:</span> <code>F(n) = F(n-1) + F(n-2)</code>, with base cases <code>F(0) = 0</code> and <code>F(1) = 1</code>.</li>
+        <li><span class="highlight">Tower of Hanoi:</span> Moving disks between rods while following recursive rules.</li>
+      </ul>
+    </div>
+
+    <!-- Backtracking Section -->
+    <div class="section">
+      <h2>Backtracking</h2>
+      <p>Backtracking is used to solve problems by incrementally building candidates for solutions and abandoning partial candidates when it determines that they cannot be completed into valid solutions.</p>
+      <ul>
+        <li><span class="highlight">General Algorithm:</span> It is a general algorithm for finding all (or some) solutions to some computational problems, that incrementally builds candidates to the solutions, and abandons each partial candidate <span class="highlight">c</span> ("backtracks") as soon as it determines that <span class="highlight">c</span> cannot possibly be completed to a valid solution.</li>
+      </ul>
+    </div>
+
+    <!-- Time and Space Efficiency Section -->
+    <div class="section">
+      <h2>Time and Space Efficiency</h2>
+      <p>Time and space efficiency are critical when designing algorithms, especially as input sizes grow. Here's why they matter:</p>
+      <ul>
+        <li><span class="highlight">Time Efficiency:</span> How fast an algorithm runs. Time efficiency ensures that algorithms run quickly, even with large inputs, by minimizing the number of operations executed.</li>
+        <li><span class="highlight">Space Efficiency:</span> Extra space the algorithm requires. Space efficiency minimizes memory consumption, making algorithms suitable for systems with limited resources.</li>
+        <li>Both time and space are measured relative to input size, ensuring algorithms scale well.</li>
+        <li>The efficiency of an algorithm can vary based on input, so we analyze the best, average, and worst cases to understand its performance in different scenarios.</li>
+        <li>The <span class="highlight">order of growth</span> (e.g., Big O notation) helps predict an algorithm's performance and choose the most efficient one for the task.</li>
+      </ul>
+    </div>
+
+    <!-- Time Complexity Classes Section -->
+    <div class="section">
+      <h2>Time Complexity Classes</h2>
+      <p>Time complexity defines how the runtime of an algorithm scales with the size of the input. Here are some common time complexities:</p>
+      <ul>
+        <li><span class="highlight">Constant Time O(1):</span> The runtime remains the same regardless of the input size.</li>
+        <li><span class="highlight">Logarithmic Time O(log n):</span> The runtime grows slowly, increasing logarithmically as the input size grows, often seen in binary search.</li>
+        <li><span class="highlight">Linear Time O(n):</span> The runtime increases proportionally to the input size, common in simple loops.</li>
+        <li><span class="highlight">Linearithmic Time O(n log n):</span> The runtime grows faster than linear but slower than quadratic.</li>
+        <li><span class="highlight">Quadratic Time O(n²):</span> The runtime grows quadratically, often in nested loops.</li>
+        <li><span class="highlight">Cubic Time O(n³):</span> The runtime increases even more steeply than quadratic.</li>
+        <li><span class="highlight">Exponential Time O(2ⁿ):</span> The runtime grows exponentially, with each additional input, typical of brute-force solutions.</li>
+        <li><span class="highlight">Factorial Time O(n!):</span> The runtime grows extremely fast, seen in problems with extensive permutations.</li>
+      </ul>
+      <p>Each class reflects how the algorithm's efficiency scales, helping determine its practicality for large inputs.</p>
+    </div>
+
+    <!-- Hierarchical Data and Tree Data Structures Section -->
+    <div class="section">
+      <h2>Hierarchical Data and Tree Data Structures</h2>
+      <p>Hierarchical data represents relationships where elements are arranged in a tree-like structure, with nodes connected by edges.</p>
+
+      <h3>Types of Tree Data Structures:</h3>
+      <ul>
+        <li><span class="highlight">Tree:</span> A basic data structure consisting of nodes connected by edges. It has a single root, and each node may have multiple child nodes. <br><strong>Use Case:</strong> Representing hierarchical structures like file systems. <br><strong>First Invented:</strong> Ancient times, formalized by the 19th century.</li>
+        <li><span class="highlight">Binary Search Tree (BST):</span> A tree where each node has at most two children, and the left child contains a value smaller than its parent, while the right child contains a value greater. <br><strong>Use Case:</strong> Efficient search, insertion, and deletion operations in ordered datasets. <br><strong>First Invented:</strong> 1959, by R. W. Floyd.</li>
+        <li><span class="highlight">AVL Tree:</span> A self-balancing binary search tree where the height difference between the left and right subtrees of any node is at most 1. <br><strong>Use Case:</strong> Maintaining balanced search trees for efficient operations. <br><strong>First Invented:</strong> 1962, by G.M. Adelson-Velsky and E.M. Landis.</li>
+        <li><span class="highlight">2-3 Tree:</span> A balanced search tree where each node can have two or three children. <br><strong>Use Case:</strong> Ensuring balanced trees in database indexing systems. <br><strong>First Invented:</strong> 1970s by John Hopcroft and Robert Tarjan.</li>
+        <li><span class="highlight">Red-Black Tree:</span> A self-balancing binary search tree where each node has an extra bit for color (red or black). <br><strong>Use Case:</strong> Implementing efficient ordered dictionaries, maps, and sets. <br><strong>First Invented:</strong> 1972, by R. Bayer.</li>
+        <li><span class="highlight">Heap:</span> A complete binary tree that satisfies the heap property (max-heap: parent > children, min-heap: parent < children). <br><strong>Use Case:</strong> Efficient priority queue operations and sorting algorithms. <br><strong>First Invented:</strong> 1960s, by J. W. J. Williams.</li>
+        <li><span class="highlight">Trie (Prefix Tree):</span> A tree-like structure used for efficient retrieval of strings, where nodes store characters of words and paths represent prefixes. <br><strong>Use Case:</strong> Implementing autocomplete systems</li>
+<div class="content">
+    <h1>Need for Array Query Algorithms</h1>
+    <p>Array query algorithms are essential for efficient data retrieval and manipulation in large datasets. They optimize operations like searching, updating, and aggregating data, ensuring fast performance, especially in scenarios with multiple queries.</p>
+
+    <div class="section">
+      <h2>Applications</h2>
+      <ul>
+        <li><span class="highlight">Range Queries:</span> Efficient sum, min, or max in subarrays (e.g., segment trees, Fenwick trees).</li>
+        <li><span class="highlight">Prefix Sum:</span> Fast cumulative sum queries.</li>
+        <li><span class="highlight">Dynamic Queries:</span> Finding kth elements or satisfying conditions (e.g., heaps, order statistics trees).</li>
+        <li><span class="highlight">Binary Search:</span> Searching in sorted arrays (e.g., binary search for element position).</li>
+        <li><span class="highlight">Range Minimum Query (RMQ):</span> Finding the minimum in subarrays (e.g., sparse tables).</li>
+        <li><span class="highlight">Kth Element Queries:</span> Finding kth smallest/largest element (e.g., Quickselect).</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Principles</h2>
+      <ul>
+        <li><span class="highlight">Preprocessing:</span> Precomputing auxiliary data structures for fast queries.</li>
+        <li><span class="highlight">Efficiency:</span> Reducing query time from linear to logarithmic or constant.</li>
+        <li><span class="highlight">Space-Time Tradeoff:</span> Extra space used to speed up query operations.</li>
+        <li><span class="highlight">Lazy Propagation:</span> Optimizing updates in structures like segment trees.</li>
+        <li><span class="highlight">Divide and Conquer:</span> Breaking down problems into smaller subproblems for efficient solutions.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
