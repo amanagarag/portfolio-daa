@@ -1,3 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Learning Reflections</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #2c3e50;
+        }
+        h1, h2 {
+            color: #1abc9c;
+            text-align: center;
+            margin-top: 20px;
+        }
+        h2 {
+            border-bottom: 2px solid #1abc9c;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            margin: 10px 0 10px 20px;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+        code {
+            background: #ecf0f1;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px 0;
+            background: #1abc9c;
+            color: white;
+        }
+        .footer-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 20px auto;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .footer-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Course Learning Reflections</h1>
+
+        <div class="section">
+            <h2>1. What are the kinds of problems we see in nature?</h2>
+            <p>Problems in nature can be broadly categorized into:</p>
+            <ul>
+                <li><strong>Iteration:</strong> Problems that involve repetitive tasks, such as loops or iterative calculations. Example: Finding the factorial of a number.</li>
+                <li><strong>Recursion:</strong> Problems that are solved by dividing them into smaller sub-problems, such as the Tower of Hanoi or Fibonacci sequence.</li>
+                <li><strong>Backtracking:</strong> Problems that involve exploring all possible solutions and reverting to previous steps when a solution path fails. Example: Solving mazes or the N-Queens problem.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. What is space and time efficiency? Why are they important?</h2>
+            <p>Space and time efficiency are critical measures of an algorithm's performance:</p>
+            <ul>
+                <li><strong>Time Efficiency:</strong> Measures how quickly an algorithm executes. Important to ensure solutions scale well with large inputs.</li>
+                <li><strong>Space Efficiency:</strong> Measures the amount of memory an algorithm uses. Essential for resource-constrained environments.</li>
+            </ul>
+            <p>Different classes of problems have varying growth orders, such as:</p>
+            <ul>
+                <li>Constant: O(1)</li>
+                <li>Logarithmic: O(log n)</li>
+                <li>Linear: O(n)</li>
+                <li>Quadratic: O(n²)</li>
+                <li>Exponential: O(2ⁿ)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Takeaways from Different Design Principles</h2>
+            <p>From Chapter 2, the key design principles include:</p>
+            <ul>
+                <li>Divide and Conquer: Break problems into smaller, solvable sub-problems.</li>
+                <li>Dynamic Programming: Solve problems by reusing solutions to overlapping sub-problems.</li>
+                <li>Greedy Algorithms: Choose the optimal choice at each step.</li>
+                <li>Backtracking: Explore all possible solutions systematically.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Hierarchical Data and Tree Data Structures</h2>
+            <p>Tree data structures optimize various problem scenarios:</p>
+            <ul>
+                <li><strong>Binary Search Trees (BST):</strong> Efficient for searching and sorting.</li>
+                <li><strong>AVL Trees:</strong> Self-balancing trees ensuring O(log n) operations.</li>
+                <li><strong>Red-Black Trees:</strong> Provide balancing with fewer rotations.</li>
+                <li><strong>Heaps:</strong> Useful for priority queues and heap sort.</li>
+                <li><strong>Tries:</strong> Efficient for storing and retrieving strings, like dictionaries.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. Array Query Algorithms</h2>
+            <p>Array query algorithms are used to solve problems like range queries and updates. Examples include:</p>
+            <ul>
+                <li><strong>Segment Trees:</strong> Solve range sum and minimum queries efficiently.</li>
+                <li><strong>Fenwick Trees (BIT):</strong> Useful for prefix sums and updates in O(log n).</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Trees vs. Graphs</h2>
+            <p>Key differences between trees and graphs:</p>
+            <ul>
+                <li><strong>Tree:</strong> A hierarchical structure with no cycles. Example: File system.</li>
+                <li><strong>Graph:</strong> A network of nodes and edges. Can have cycles. Example: Road maps.</li>
+            </ul>
+            <p>Traversals include:</p>
+            <ul>
+                <li>Tree: Preorder, Inorder, Postorder</li>
+                <li>Graph: Depth-First Search (DFS), Breadth-First Search (BFS)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. Sorting and Searching Algorithms</h2>
+            <p>Sorting and searching algorithms connect theory to the real world:</p>
+            <ul>
+                <li><strong>Sorting:</strong> Bubble sort, quicksort, mergesort optimize ordering problems in databases, logistics, etc.</li>
+                <li><strong>Searching:</strong> Binary search enables quick lookups in sorted datasets.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>8. Importance of Graph Algorithms</h2>
+            <p>Graph algorithms like Dijkstra’s or Kruskal’s are essential for:</p>
+            <ul>
+                <li>Spanning Trees: Minimum cost network connection.</li>
+                <li>Shortest Paths: Optimizing travel or data transfer.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>9. Studied Algorithm Design Techniques</h2>
+            <p>Studied techniques include:</p>
+            <ul>
+                <li>Divide and Conquer</li>
+                <li>Dynamic Programming</li>
+                <li>Greedy Algorithms</li>
+                <li>Backtracking</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <button class="footer-btn">Business Case Studies</button>
+    </footer>
+</body>
+</html>
 
 
-<h1>ADD HERE </h1>
+
