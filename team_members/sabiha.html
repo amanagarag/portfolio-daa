@@ -283,9 +283,298 @@
         </div>
     </div>
 
-    <footer>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Concepts</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        header:hover {
+            background-color: #2980b9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 2.5em;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 25px;
+            color: #34495e;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            line-height: 1.7;
+        }
+
+        ul li span.highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        th, td {
+            padding: 20px;
+            text-align: left;
+            border: 1px solid #ddd;
+            font-size: 1.1em;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        td {
+            background-color: #ecf0f1;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .formula {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f8f9fa;
+            padding: 5px 8px;
+            border-radius: 5px;
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px 0;
+            background-color: #34495e;
+            color: white;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        /* Button Style */
+        .footer-btn {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            padding: 15px 25px;
+            background-color: #3498db;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .footer-btn:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section ul li:hover {
+            color: #3498db;
+            cursor: pointer;
+            font-weight: bold;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Understanding Algorithms and Data Structures</h1>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>1. Types of Problems</h2>
+            <ul>
+                <li><span class="highlight">Iteration:</span> Repeats operations until a condition is met. <br> <em>Example:</em> Summing an array. <span class="formula">T(n) = c * n</span></li>
+                <li><span class="highlight">Recursion:</span> Solves a problem by reducing it to smaller subproblems. <br> <em>Example:</em> Fibonacci sequence. <span class="formula">T(n) = T(n-1) + T(n-2) + O(1)</span></li>
+                <li><span class="highlight">Backtracking:</span> Explores all possible solutions, abandoning invalid paths. <br> <em>Example:</em> N-Queens problem. <span class="formula">T(n) = O(k^n)</span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. Space and Time Efficiency</h2>
+            <ul>
+                <li><span class="highlight">Space Efficiency:</span> Measures memory usage. <br> <em>Example:</em> Recursive functions use the call stack.</li>
+                <li><span class="highlight">Time Efficiency:</span> Measures execution time. <br> <em>Example:</em> Sorting an array takes <span class="formula">O(n log n)</span> in merge sort.</li>
+            </ul>
+            <h3>Orders of Growth</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Class of Problems</th>
+                        <th>Order of Growth</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Constant</td>
+                        <td><span class="formula">O(1)</span></td>
+                        <td>Accessing an array element</td>
+                    </tr>
+                    <tr>
+                        <td>Logarithmic</td>
+                        <td><span class="formula">O(log n)</span></td>
+                        <td>Binary search</td>
+                    </tr>
+                    <tr>
+                        <td>Linear</td>
+                        <td><span class="formula">O(n)</span></td>
+                        <td>Linear search</td>
+                    </tr>
+                    <tr>
+                        <td>Quadratic</td>
+                        <td><span class="formula">O(n^2)</span></td>
+                        <td>Bubble sort</td>
+                    </tr>
+                    <tr>
+                        <td>Exponential</td>
+                        <td><span class="formula">O(2^n)</span></td>
+                        <td>Subset generation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>3. Design Principles</h2>
+            <ul>
+                <li><span class="highlight">Divide and Conquer:</span> Split problems, solve parts, and combine.</li>
+                <li><span class="highlight">Greedy Algorithms:</span> Make locally optimal choices.</li>
+                <li><span class="highlight">Dynamic Programming:</span> Solve overlapping subproblems by storing results.</li>
+                <li><span class="highlight">Backtracking:</span> Discard unpromising partial solutions.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Hierarchical Data and Trees</h2>
+            <ul>
+                <li><span class="highlight">Binary Search Tree (BST):</span> Balanced search/insert/delete in <span class="formula">O(log n)</span>.</li>
+                <li><span class="highlight">AVL Tree:</span> Self-balancing BST.</li>
+                <li><span class="highlight">Red-Black Tree:</span> Efficiently balanced tree structure.</li>
+                <li><span class="highlight">Trie:</span> Optimized for prefix-based operations.</li>
+                <li><span class="highlight">Heap:</span> Priority queue with <span class="formula">O(log n)</span> insert/extract.</li>
+            </ul>
+            <h3>Applications</h3>
+            <ul>
+                <li><span class="highlight">BST:</span> Database indexing.</li>
+                <li><span class="highlight">Trie:</span> Autocomplete systems.</li>
+                <li><span class="highlight">Heap:</span> Priority scheduling.</li>
+                <li><span class="highlight">Red-Black Tree:</span> Associative containers like `std::map`.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. Array Query Algorithms</h2>
+            <ul>
+                <li><span class="highlight">Prefix Sum:</span> Efficient range sum queries. Formula: <span class="formula">S[j] - S[i-1]</span>.</li>
+                <li><span class="highlight">Segment Tree:</span> Supports range queries and updates in <span class="formula">O(log n)</span>.</li>
+                <li><span class="highlight">Fenwick Tree:</span> Optimized for cumulative frequency queries.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Tree vs Graph</h2>
+            <ul>
+                <li><span class="highlight">Tree:</span> Acyclic hierarchical structure. <br> <em>Applications:</em> Expression evaluation, hierarchical data modeling.</li>
+                <li><span class="highlight">Graph:</span> Arbitrary connections with cycles allowed. <br> <em>Applications:</em> Network routing, dependency resolution.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. Sorting and Searching Algorithms</h2>
+            <h3>Sorting</h3>
+            <ul>
+                <li><span class="highlight">Bubble Sort:</span> <span class="formula">O(n^2)</span>, basic sorting.</li>
+                <li><span class="highlight">Merge Sort:</span> <span class="formula">O(n log n)</span>, divide and conquer approach.</li>
+                <li><span class="highlight">Quick Sort:</span> <span class="formula">O(n log n)</span> average case, <span class="formula">O(n^2)</span> worst case.</li>
+            </ul>
+            <h3>Searching</h3>
+            <ul>
+                <li><span class="highlight">Linear Search:</span> <span class="formula">O(n)</span>, sequential scan.</li>
+                <li><span class="highlight">Binary Search:</span> <span class="formula">O(log n)</span>, works on sorted data.</li>
+            </ul>
+        </div>
+    </div>
+
+   <footer>
+    <a href="Business case/Sabiha_BCA.html">
         <button class="footer-btn">Business Case Studies</button>
-    </footer>
+    </a>
+</footer>
+</body>
+</html>
 
 </body>
 </html>
