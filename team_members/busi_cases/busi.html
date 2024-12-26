@@ -13,21 +13,37 @@
         }
         .container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
+            justify-content: center;
+            min-height: 100vh;
             text-align: center;
         }
         .business-case {
             background-color: #fff;
             padding: 20px 40px;
+            margin: 10px 0;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 80%;
         }
-        .business-case h1 {
+        .business-case h1, .business-case h2 {
             margin-bottom: 20px;
-            font-size: 24px;
             color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -35,20 +51,22 @@
     <div class="container">
         <div class="business-case">
             <h1>Business Case 1: Maintenance of Traffic</h1>
+            <ul>
+                <li>SDG Goal Alignment: This management of public transport system is directly aligned with SDG Goal 11.2.</li>
+                <li>Here we can use Dijkstra's Algorithm to solve the problem.</li>
+                <li><a href="https://github.com/amanagarag/portfolio-daa/blob/main/Dijkstra_code/Dijkstra.cpp">Dijkstra's C++ Code</a></li>
+            </ul>
         </div>
-        <ul>
-            <li> SDG Goal Alignment,This management of public transport system is directly aligned with SDG Goal 11.2.</li>
-        <li>Here we can use Dijkstra's Algorithm to solve the problem.</li>
-            <a href="https://github.com/amanagarag/portfolio-daa/blob/main/Dijkstra_code/Dijkstra.cpp">Dijkstra's_c++_code</a><br>
-      </ul>
-    </div>
+
         <div class="business-case">
-            <h2>Business Case 2: Ensure access for all to adequate.</h2>
-        <ul>
-            <li> SDG Goal Alignment,This management of public transport system is directly aligned with SDG Goal 11.1.</li>
-        <li>Here we can use Dijkstra's Algorithm to solve the problem.</li>
-            <a href="https://github.com/amanagarag/portfolio-daa/blob/main/Dijkstra_code/Dijkstra.cpp">Dijkstra's_c++_code</a><br>
-      </ul>
+            <h2>Business Case 2: Ensure Access for All to Adequate</h2>
+            <ul>
+                <li>SDG Goal Alignment: This management of public transport system is directly aligned with SDG Goal 11.1.</li>
+                <li>Here we can use Dijkstra's Algorithm to solve the problem.</li>
+                <li><a href="https://github.com/amanagarag/portfolio-daa/blob/main/Dijkstra_code/Dijkstra.cpp">Dijkstra's C++ Code</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
+
