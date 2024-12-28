@@ -1,1 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f0f0f5, #d9e4ea);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 2px solid #2980b9;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .container:hover {
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            border-bottom: 3px solid #2980b9;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-left: 8px solid #2980b9;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border-top: 4px solid #3498db;
+        }
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .section h2 {
+            font-size: 2rem;
+            color: #2980b9;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-transform: capitalize;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 5px;
+        }
+        .section h3 {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        ul {
+            padding-left: 20px;
+            list-style-type: none;
+        }
+        li {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            color: #333;
+            position: relative;
+            padding-left: 25px;
+            border-left: 4px solid #2980b9;
+            padding-left: 20px;
+        }
+        li:before {
+            content: "✔";
+            color: #2980b9;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 18px;
+        }
+        .impact {
+            font-style: italic;
+            color: #666;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            border-left: 4px solid #2980b9;
+            padding-left: 15px;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+        .impact strong {
+            color: #2c3e50;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #2980b9;
+            color: white;
+            padding: 14px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 30px;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #2980b9;
+        }
+        .btn:hover {
+            background-color: #3498db;
+            transform: translateY(-5px);
+            border-color: #3498db;
+        }
+        .btn:active {
+            transform: translateY(2px);
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            .section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
 
+    <div class="container">
+        <h1>Case Studies</h1>
+
+        <!-- Case Study 1 -->
+        <div class="section">
+            <h2>Case Study 1: Unavailability of School Bus</h2>
+            <h3>Problem</h3>
+            <p>Students have to travel long distances on foot, which can be dangerous, especially during extreme weather conditions.</p>
+            <h3>Impact</h3>
+            <p>High absenteeism, students arriving late, and physical exhaustion.</p>
+            <h3>Solution</h3>
+            <h4>1. Dijkstra's Algorithm for Optimal Route Selection</h4>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+#include &lt;climits&gt;
+using namespace std;
+
+struct Edge {
+    int dest, weight;
+};
+
+void dijkstra(int start, vector&lt;vector&lt;Edge&gt;&gt;&gt; &graph, vector&lt;int&gt; &distances) {
+    priority_queue&lt;pair&lt;int, int&gt;&gt;, vector&lt;pair&lt;int, int&gt;&gt;, greater&lt;&gt; pq;
+    distances[start] = 0;
+    pq.push({0, start});
+
+    while (!pq.empty()) {
+        auto [dist, node] = pq.top();
+        pq.pop();
+
+        for (const auto& edge : graph[node]) {
+            int newDist = dist + edge.weight;
+            if (newDist &lt; distances[edge.dest]) {
+                distances[edge.dest] = newDist;
+                pq.push({newDist, edge.dest});
+            }
+        }
+    }
+}
+
+int main() {
+    int nodes = 5;
+    vector&lt;vector&lt;Edge&gt;&gt;&gt; graph(nodes);
+
+    graph[0].push_back({1, 10});
+    graph[0].push_back({2, 3});
+    graph[1].push_back({3, 2});
+    graph[2].push_back({1, 1});
+    graph[2].push_back({3, 8});
+
+    vector&lt;int&gt; distances(nodes, INT_MAX);
+    dijkstra(0, graph, distances);
+
+    for (int i = 0; i &lt; nodes; i++)
+        cout &lt;&lt; "Distance to node " &lt;&lt; i &lt;&lt; ": " &lt;&lt; distances[i] &lt;&lt; endl;
+    return 0;
+}</code></pre>
+            <h4>2. Impact of Improved Transportation</h4>
+            <div class="impact">
+                <strong>Impact:</strong> Reduced absenteeism and safer travel for students.
+            </div>
+            <div class="impact">
+                <strong>SDG Goal Alignment:</strong> This business case study is directly aligned with <strong>SDG Goal 11.2.1</strong>.
+            </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="section">
+            <h2>Case Study 2: No Ambulance Putting Life at Risk</h2>
+            <h3>Problem</h3>
+            <p>Critical medical emergencies are delayed due to no ambulance availability.</p>
+            <h3>Impact</h3>
+            <p>Increased mortality rates and overcrowded local healthcare facilities.</p>
+            <h3>Solution</h3>
+            <h4>1. Hungarian Algorithm for Ambulance Allocation</h4>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int calculateDistance(pair&lt;int, int&gt; a, pair&lt;int, int&gt; b) {
+    return abs(a.first - b.first) + abs(a.second - b.second);
+}
+
+int main() {
+    vector&lt;pair&lt;int, int&gt;&gt; hospitals = {{0, 0}, {2, 2}};
+    vector&lt;pair&lt;int, int&gt;&gt; emergencies = {{1, 1}, {3, 3}};
+
+    for (const auto& hospital : hospitals) {
+        for (const auto& emergency : emergencies) {
+            cout &lt;&lt; "Distance from hospital (" &lt;&lt; hospital.first &lt;&lt; ", " &lt;&lt; hospital.second &lt;&lt; ") to emergency (" 
+                 &lt;&lt; emergency.first &lt;&lt; ", " &lt;&lt; emergency.second &lt;&lt; ") is " &lt;&lt; calculateDistance(hospital, emergency) &lt;&lt; endl;
+        }
+    }
+    return 0;
+}</code></pre>
+            <h4>2. Impact of Ambulance Routing</h4>
+            <div class="impact">
+                <strong>Impact:</strong> Quicker response times and saved lives.
+            </div>
+            <div class="impact">
+                <strong>SDG Goal Alignment:</strong> This business case study is directly aligned with <strong>SDG Goal 11.2</strong>.
+            </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="section">
+            <h2>Case Study 3: Unavailability of Solar System</h2>
+            <h3>Problem</h3>
+            <p>Lack of infrastructure to install and maintain solar systems in remote areas.</p>
+            <h3>Impact</h3>
+            <p>Dependency on non-renewable energy sources and higher energy costs.</p>
+            <h3>Solution</h3>
+            <h4>1. Genetic Algorithm for Solar Panel Placement</h4>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;cstdlib&gt;
+using namespace std;
+
+struct Solution {
+    vector&lt;int&gt; placement;
+    int fitness;
+};
+
+void evaluate(Solution& sol) {
+    sol.fitness = 0;
+    for (int x : sol.placement) {
+        sol.fitness += x * x;
+    }
+}
+
+int main() {
+    Solution initialSolution = {{1, 0, 1, 0, 1}, 0};
+    evaluate(initialSolution);
+    cout &lt;&lt; "Fitness of initial solution: " &lt;&lt; initialSolution.fitness &lt;&lt; endl;
+    return 0;
+}</code></pre>
+            <h4>2. Impact of Solar System Availability</h4>
+            <div class="impact">
+                <strong>Impact:</strong> Enhanced access to renewable energy and reduced energy costs.
+            </div>
+            <div class="impact">
+                <strong>SDG Goal Alignment:</strong> This business case study is directly aligned with <strong>SDG Goal 11.a</strong>.
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
