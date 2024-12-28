@@ -5,46 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Case Display</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            text-align: center;
+            padding: 20px;
         }
+
         .business-case {
             background-color: #fff;
-            padding: 20px 40px;
-            margin: 10px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 30px 40px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             width: 80%;
+            max-width: 1100px;
+            transition: transform 0.3s ease-in-out;
         }
-        .business-case h1, .business-case h2 {
+
+        .business-case:hover {
+            transform: scale(1.02);
+        }
+
+        .business-case h1 {
+            font-size: 2rem;
+            color: #444;
             margin-bottom: 20px;
-            color: #333;
         }
+
+        .business-case h2 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
         ul {
-            list-style: none;
-            padding: 0;
+            list-style-type: none;
+            padding-left: 0;
         }
+
         ul li {
-            margin: 10px 0;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            line-height: 1.5;
         }
+
+        ul li strong {
+            font-weight: bold;
+        }
+
         a {
             color: #007bff;
             text-decoration: none;
+            font-weight: bold;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
+        .section-title {
+            font-size: 1.2rem;
+            color: #444;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .section-content {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .business-case {
+                width: 90%;
+            }
+
+            .business-case h1 {
+                font-size: 1.8rem;
+            }
+
+            .business-case h2 {
+                font-size: 1.3rem;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -52,7 +118,6 @@
         <div class="business-case">
             <h1>Maintenance of Traffic</h1>
 
-            <!-- Business Case Section -->
             <section>
                 <h2>Business Case 1: Maintenance of Traffic</h2>
                 <ul>
@@ -60,7 +125,6 @@
                 </ul>
             </section>
 
-            <!-- Problem Section -->
             <section>
                 <h2>Problem:</h2>
                 <ul>
@@ -75,8 +139,7 @@
                 </ul>
             </section>
 
-            <!-- Tools Section -->
-            <section class="section">
+            <section>
                 <h2>Tools</h2>
                 <ul>
                     <li><strong>Binary Tree:</strong> Used to represent hierarchical data structures.</li>
@@ -84,8 +147,7 @@
                 </ul>
             </section>
 
-            <!-- Graph Algorithms Section -->
-            <section class="section">
+            <section>
                 <h2>Graph Algorithms</h2>
                 <ul>
                     <li><strong>Shortest Path Calculation:</strong> Use Dijkstra’s algorithm to find optimal paths in a graph with weighted edges.</li>
@@ -93,8 +155,7 @@
                 </ul>
             </section>
 
-            <!-- Sorting Algorithm Section -->
-            <section class="section">
+            <section>
                 <h2>Sorting Algorithm</h2>
                 <ul>
                     <li><strong>Merge Sort:</strong> A stable, divide-and-conquer sorting algorithm that splits the dataset into smaller chunks, sorts them, and merges them back together in order.</li>
@@ -103,101 +164,93 @@
             </section>
 
         </div>
-    </div>
+
         <div class="business-case">
-            
             <h1>Ensure Access for All to Adequate</h1>
-    <section>
-        <h2>Business Case 2: Ensure Access for All to Adequate</h2>
-        <p><strong>SDG Goal Alignment:</strong> Ensure Access for All to Adequate is directly aligned with <strong>SDG Goal 11.1</strong>.</p>
-    </section>
-    <section>
-        <h2>Problem:</h2>
-        <ul>
-            <li><strong>Goal:</strong> Provide efficient routes and infrastructure to ensure access to essential services.</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Solution:</h2>
-        <<ul>
-                <li><strong>DFS (Depth-First Search):</strong> A graph traversal algorithm that explores as far down a branch as possible before backtracking.</li>
-                <li><strong>BFS (Breadth-First Search):</strong> A graph traversal algorithm that explores all neighbors at the present depth level before moving on to nodes at the next depth level.</li>
-            </ul>
-        </section>
+            <section>
+                <h2>Business Case 2: Ensure Access for All to Adequate</h2>
+                <p><strong>SDG Goal Alignment:</strong> Ensure Access for All to Adequate is directly aligned with <strong>SDG Goal 11.1</strong>.</p>
+            </section>
+            <section>
+                <h2>Problem:</h2>
+                <ul>
+                    <li><strong>Goal:</strong> Provide efficient routes and infrastructure to ensure access to essential services.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Solution:</h2>
+                <ul>
+                    <li><strong>DFS (Depth-First Search):</strong> A graph traversal algorithm that explores as far down a branch as possible before backtracking.</li>
+                    <li><strong>BFS (Breadth-First Search):</strong> A graph traversal algorithm that explores all neighbors at the present depth level before moving on to nodes at the next depth level.</li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Shortest Path Algorithm</h2>
-            <ul>
-                <li><strong>Bellman-Ford:</strong> An algorithm for finding the shortest paths from a source node to all other nodes in a graph, even when edges have negative weights.</li>
-            </ul>
-        </section>
+            <section>
+                <h2>Shortest Path Algorithm</h2>
+                <ul>
+                    <li><strong>Bellman-Ford:</strong> An algorithm for finding the shortest paths from a source node to all other nodes in a graph, even when edges have negative weights.</li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Sorting Algorithms</h2>
-            <ul>
-                <li><strong>Bubble Sort:</strong> A simple comparison-based sorting algorithm that repeatedly steps through the list, compares adjacent items, and swaps them if they are in the wrong order.</li>
-                <li><strong>Selection Sort:</strong> A sorting algorithm that repeatedly selects the smallest (or largest) element from the unsorted part of the list and moves it to the sorted part.</li>
-                <li><strong>Merge Sort:</strong> A divide-and-conquer algorithm that splits the dataset into smaller subarrays, sorts them, and merges them back into a sorted array.</li>
-                <li><strong>Heap Sort:</strong> A comparison-based sorting algorithm that uses a binary heap data structure to build a heap and then sorts the array.</li>
-                <li><a href="https://github.com/amanagarag/portfolio-daa/blob/main/Dijkstra_code/second.cpp">Code</a></li>
-            </ul>
+            <section>
+                <h2>Sorting Algorithms</h2>
+                <ul>
+                    <li><strong>Bubble Sort:</strong> A simple comparison-based sorting algorithm that repeatedly steps through the list, compares adjacent items, and swaps them if they are in the wrong order.</li>
+                    <li><strong>Selection Sort:</strong> A sorting algorithm that repeatedly selects the smallest (or largest) element from the unsorted part of the list and moves it to the sorted part.</li>
+                    <li><strong>Merge Sort:</strong> A divide-and-conquer algorithm that splits the dataset into smaller subarrays, sorts them, and merges them back into a sorted array.</li>
+                    <li><strong>Heap Sort:</strong> A comparison-based sorting algorithm that uses a binary heap data structure to build a heap and then sorts the array.</li>
+                    <li><a href="https://github.com/amanagarag/portfolio-daa/blob/main/Dijkstra_code/second.cpp">Code</a></li>
+                </ul>
+            </section>
         </div>
 
         <div class="business-case">
             <h1>Enhancement of Land Consumption Rate</h1>
-    <section>
-        <h2>Business Case 3: Enhancement of Land Consumption Rate</h2>
-        <p><strong>SDG Goal Alignment:</strong> Enhancement of Land Consumption Rate is directly aligned with <strong>SDG Goal 11.3.1</strong>.</p>
-    </section>
-    <section>
-        <h2>Problem:</h2>
-        <ul>
-            <li><strong>Goal:</strong> Optimize land consumption and improve the land usage rate for public infrastructure.</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Solution:</h2>
-        <ul>
-    <li><strong>Basic Data Structures:</strong>
-        <ul>
-            <li>Array</li>
-            <li>Queue</li>
-        </ul>
-    </li>
-    <li><strong>Data Structures/Tools:</strong>
-        <ul>
-            <li>Heap</li>
-        </ul>
-    </li>
-    <li><strong>Sorting Algorithms:</strong>
-        <ul>
-            <li>Merge Sort</li>
-        </ul>
-    </li>
-    <li><strong>Searching Algorithms:</strong>
-        <ul>
-            <li>Brute Force String Search (general search operations)</li>
-        </ul>
-    </li>
-    <li><strong>Graph Algorithms:</strong>
-        <ul>
-            <li>DFS</li>
-            <li>BFS</li>
-            <li>Dijkstra</li>
-        </ul>
-    </li>
-    <li><strong>Not Used:</strong>
-        <ul>
-            <li>Binary Tree, BST, AVL Tree, Red Black Tree, 2-3 Tree</li>
-            <li>Hashing, Trie, Fenwick Tree, Segment Tree, Sparse Table, Lookup Table, Union-Find, Skip List</li>
-            <li>Selection Sort, Insertion Sort, Heap Sort, Quick Sort</li>
-            <li>Floyd, Warshall, Kruskal, Prim, Bellman-Ford</li>
-            <li><a href="https://github.com/amanagarag/portfolio-daa/blob/main/Dijkstra_code/third.cpp">Code</a></li>
-        </ul>
-    </li>
-</ul>
+            <section>
+                <h2>Business Case 3: Enhancement of Land Consumption Rate</h2>
+                <p><strong>SDG Goal Alignment:</strong> Enhancement of Land Consumption Rate is directly aligned with <strong>SDG Goal 11.3.1</strong>.</p>
+            </section>
+            <section>
+                <h2>Problem:</h2>
+                <ul>
+                    <li><strong>Goal:</strong> Optimize land consumption and improve the land usage rate for public infrastructure.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Solution:</h2>
+                <ul>
+                    <li><strong>Basic Data Structures:</strong>
+                        <ul>
+                            <li>Array</li>
+                            <li>Queue</li>
+                        </ul>
+                    </li>
+                    <li><strong>Data Structures/Tools:</strong>
+                        <ul>
+                            <li>Heap</li>
+                        </ul>
+                    </li>
+                    <li><strong>Sorting Algorithms:</strong>
+                        <ul>
+                            <li>Merge Sort</li>
+                        </ul>
+                    </li>
+                    <li><strong>Searching Algorithms:</strong>
+                        <ul>
+                            <li>Brute Force String Search (general search operations)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Graph Algorithms:</strong>
+                        <ul>
+                            <li>DFS</li>
+                            <li>BFS</li>
+                            <li>Dijkstra</li>
+                            <li><a href="https://github.com/amanagarag/portfolio-daa/blob/main/Dijkstra_code/third.cpp">Code</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
         </div>
     </div>
 </body>
 </html>
-
