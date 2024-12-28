@@ -128,6 +128,7 @@ int main() {
     TrafficNetwork network(vertices);
 
     vector<int> dist(vertices, INT_MAX);
+    clock_t start = clock();
     if (network.bellmanFord(edges, graph, 0, dist)) {
         cout << "Shortest paths from source (0):\n";
         for (int i = 0; i < vertices; ++i) {
@@ -136,38 +137,58 @@ int main() {
     } else {
         cout << "Negative weight cycle detected\n";
     }
+    clock_t end = clock();
+    cout << "Bellman-Ford execution time: " << double(end - start) / CLOCKS_PER_SEC << " seconds\n";
 
     vector<bool> visited(vertices, false);
     cout << "DFS Traversal: ";
+    start = clock();
     network.dfs(0, visited);
     cout << endl;
+    end = clock();
+    cout << "DFS execution time: " << double(end - start) / CLOCKS_PER_SEC << " seconds\n";
 
     cout << "BFS Traversal: ";
+    start = clock();
     network.bfs(0);
     cout << endl;
+    end = clock();
+    cout << "BFS execution time: " << double(end - start) / CLOCKS_PER_SEC << " seconds\n";
 
     vector<int> data = {5, 2, 9, 1, 5, 6};
     cout << "Original Data: ";
     for (int num : data) cout << num << " ";
     
+    start = clock();
     network.bubbleSort(data);
     cout << "\nBubble Sorted Data: ";
     for (int num : data) cout << num << " ";
+    end = clock();
+    cout << "\nBubble Sort execution time: " << double(end - start) / CLOCKS_PER_SEC << " seconds\n";
     
     data = {5, 2, 9, 1, 5, 6};
+    start = clock();
     network.selectionSort(data);
     cout << "\nSelection Sorted Data: ";
     for (int num : data) cout << num << " ";
+    end = clock();
+    cout << "\nSelection Sort execution time: " << double(end - start) / CLOCKS_PER_SEC << " seconds\n";
     
     data = {5, 2, 9, 1, 5, 6};
+    start = clock();
     network.mergeSort(data);
     cout << "\nMerge Sorted Data: ";
     for (int num : data) cout << num << " ";
+    end = clock();
+    cout << "\nMerge Sort execution time: " << double(end - start) / CLOCKS_PER_SEC << " seconds\n";
 
     data = {5, 2, 9, 1, 5, 6};
+    start = clock();
     network.heapSort(data);
     cout << "\nHeap Sorted Data: ";
     for (int num : data) cout << num << " ";
+    end = clock();
+    cout << "\nHeap Sort execution time: " << double(end - start) / CLOCKS_PER_SEC << " seconds\n";
     
     return 0;
 }
