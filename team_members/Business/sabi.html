@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -194,6 +193,9 @@ int main() {
     cout &lt;&lt; "Predicted demand for next day: " &lt;&lt; predictDemand(demandHistory) &lt;&lt; " units." &lt;&lt; endl;
     return 0;
 }</code></pre>
+            <div class="impact">
+                <strong>SDG Goal Alignment:</strong> This Business Case Study is directly aligned with SDG Goal 11.6.1 (Reduction of the adverse per capita environmental impact of cities, including water use).
+            </div>
         </div>
 
         <!-- Case Study 2 -->
@@ -234,75 +236,74 @@ int findShortestPath(vector&lt;vector&lt;int&gt;&gt; &graph, int start, int end)
 }
 
 int main() {
-    vector&lt;vector&lt;int&gt;&gt; graph = {{0, 1, 4}, {1, 0, 2}, {4, 2, 0}};
-    cout &lt;&lt; "Shortest path: " &lt;&lt; findShortestPath(graph, 0, 2) &lt;&lt; endl;
-    return 0;
+    vector&lt;vector&lt;int&gt;&gt; graph = {{0, 1, 4}, {1, 0, 2}, {4, 2, 0}};  
 }</code></pre>
+            <div class="impact">
+                <strong>SDG Goal Alignment:</strong> This Business Case Study is directly aligned with SDG Goal 11.6 (Reduction of the adverse environmental impact of cities and communities).
+            </div>
         </div>
 
         <!-- Case Study 3 -->
         <div class="section">
-            <h2>Case Study 3: Traffic Congestion in Urban Areas</h2>
+            <h2>Case Study 3: Inclusive and Sustainable Urbanization</h2>
             <h3>Background</h3>
             <p>
-                Rapid urbanization has led to increased traffic congestion, resulting in longer commutes, higher pollution levels, and reduced quality of life for residents.
+                Rapid urban growth has created challenges in inclusivity and sustainability. Issues like lack of affordable housing and the need for green spaces are impacting the quality of urban life.
             </p>
             <h3>Challenges Identified</h3>
             <ul>
-                <li><strong>Peak Hour Traffic:</strong> High volume of vehicles during rush hours.</li>
-                <li><strong>Signal Timing:</strong> Inefficient traffic light management causing bottlenecks.</li>
-                <li><strong>Emergency Vehicles:</strong> Delayed response times due to traffic density.</li>
+                <li><strong>Affordable Housing:</strong> Rising property costs are making housing unaffordable for low-income residents.</li>
+                <li><strong>Overcrowding:</strong> Increased population density resulting in insufficient public spaces and amenities.</li>
+                <li><strong>Environmental Impact:</strong> Lack of green spaces and increasing pollution levels.</li>
             </ul>
             <h3>Solution</h3>
-            <h4>1. Dynamic Signal Timing</h4>
+            <h4>1. Smart Zoning Policies</h4>
             <pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;vector&gt;
 using namespace std;
 
-void adjustSignalTiming(vector&lt;int&gt; trafficDensity) {
-    for (int i = 0; i &lt; trafficDensity.size(); ++i) {
-        if (trafficDensity[i] &gt; 50) {
-            cout &lt;&lt; "Increase green light duration at junction " &lt;&lt; i &lt;&lt; endl;
+void allocateZones(vector&lt;int&gt; areaDemands, int totalArea) {
+    int availableArea = totalArea;
+    for (int i = 0; i &lt; areaDemands.size(); ++i) {
+        if (areaDemands[i] &lt;= availableArea) {
+            cout &lt;&lt; "Allocated " &lt;&lt; areaDemands[i] &lt;&lt; " units to zone " &lt;&lt; i &lt;&lt; endl;
+            availableArea -= areaDemands[i];
         } else {
-            cout &lt;&lt; "Decrease green light duration at junction " &lt;&lt; i &lt;&lt; endl;
+            cout &lt;&lt; "Insufficient space for zone " &lt;&lt; i &lt;&lt; endl;
         }
     }
 }
 
 int main() {
-    vector&lt;int&gt; trafficDensity = {30, 60, 45, 70};
-    adjustSignalTiming(trafficDensity);
+    vector&lt;int&gt; areaDemands = {100, 150, 50, 120};
+    int totalArea = 400;
+    allocateZones(areaDemands, totalArea);
     return 0;
 }</code></pre>
-            <h4>2. Emergency Vehicle Routing</h4>
+            <h4>2. Green Urban Development</h4>
             <pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;vector&gt;
 using namespace std;
 
-int findFastestRoute(vector&lt;vector&lt;int&gt;&gt; &graph, int start, int emergencyPoint) {
-    vector&lt;int&gt; distance(graph.size(), INT_MAX);
-    distance[start] = 0;
-
-    for (int i = 0; i &lt; graph.size(); ++i) {
-        for (int u = 0; u &lt; graph.size(); ++u) {
-            for (int v = 0; v &lt; graph[u].size(); ++v) {
-                if (distance[u] + graph[u][v] &lt; distance[v]) {
-                    distance[v] = distance[u] + graph[u][v];
-                }
-            }
-        }
+float calculateGreenCoverage(vector&lt;float&gt; greenAreas) {
+    float totalArea = 0;
+    for (float area : greenAreas) {
+        totalArea += area;
     }
-
-    return distance[emergencyPoint];
+    return totalArea;
 }
 
 int main() {
-    vector&lt;vector&lt;int&gt;&gt; graph = {{0, 5, 10}, {5, 0, 3}, {10, 3, 0}};
-    cout &lt;&lt; "Fastest route time: " &lt;&lt; findFastestRoute(graph, 0, 2) &lt;&lt; " minutes." &lt;&lt; endl;
+    vector&lt;float&gt; greenAreas = {50.0, 60.0, 45.0};
+    cout &lt;&lt; "Total green space area: " &lt;&lt; calculateGreenCoverage(greenAreas) &lt;&lt; " square units." &lt;&lt; endl;
     return 0;
 }</code></pre>
+            <div class="impact">
+                <strong>SDG Goal Alignment:</strong> This Business Case Study is directly aligned with SDG Goal 11.3 (Enhance inclusive and sustainable urbanization and capacity for participatory, integrated, and sustainable human settlement planning and management).
+            </div>
         </div>
-    </div>
 
+    </div>
 </body>
 </html>
+
