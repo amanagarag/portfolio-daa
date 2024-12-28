@@ -1,1 +1,308 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f0f0f5, #d9e4ea);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 2px solid #2980b9;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .container:hover {
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            border-bottom: 3px solid #2980b9;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-left: 8px solid #2980b9;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border-top: 4px solid #3498db;
+        }
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .section h2 {
+            font-size: 2rem;
+            color: #2980b9;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-transform: capitalize;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 5px;
+        }
+        .section h3 {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        ul {
+            padding-left: 20px;
+            list-style-type: none;
+        }
+        li {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            color: #333;
+            position: relative;
+            padding-left: 25px;
+            border-left: 4px solid #2980b9;
+            padding-left: 20px;
+        }
+        li:before {
+            content: "✔";
+            color: #2980b9;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 18px;
+        }
+        .impact {
+            font-style: italic;
+            color: #666;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            border-left: 4px solid #2980b9;
+            padding-left: 15px;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+        .impact strong {
+            color: #2c3e50;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #2980b9;
+            color: white;
+            padding: 14px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 30px;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #2980b9;
+        }
+        .btn:hover {
+            background-color: #3498db;
+            transform: translateY(-5px);
+            border-color: #3498db;
+        }
+        .btn:active {
+            transform: translateY(2px);
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            .section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Case Studies</h1>
+
+        <!-- Case Study 1 -->
+        <div class="section">
+            <h2>Case Study 1: Insufficient and Inconsistent Water Supply</h2>
+            <h3>Background</h3>
+            <p>
+                Residents face daily challenges due to irregular water supply, impacting their basic needs. This issue is exacerbated by outdated infrastructure, poor distribution management, and high demand.
+            </p>
+            <h3>Challenges Identified</h3>
+            <ul>
+                <li><strong>Outdated Pipelines:</strong> Frequent leaks and inefficiencies in distribution.</li>
+                <li><strong>High Demand:</strong> Urban growth exceeding supply capacity.</li>
+                <li><strong>Resource Allocation:</strong> Poor scheduling of water distribution.</li>
+            </ul>
+            <h3>Solution</h3>
+            <h4>1. Predictive Maintenance</h4>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+void detectLeaks(vector&lt;int&gt; pressureReadings) {
+    for (int i = 1; i &lt; pressureReadings.size(); ++i) {
+        if (pressureReadings[i] &lt; pressureReadings[i - 1]) {
+            cout &lt;&lt; "Potential leak detected at segment " &lt;&lt; i &lt;&lt; endl;
+        }
+    }
+}
+
+int main() {
+    vector&lt;int&gt; pressureReadings = {100, 98, 95, 92, 85};
+    detectLeaks(pressureReadings);
+    return 0;
+}</code></pre>
+            <h4>2. Demand Forecasting</h4>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+float predictDemand(vector&lt;float&gt; demandHistory) {
+    float sum = 0;
+    for (float demand : demandHistory) {
+        sum += demand;
+    }
+    return sum / demandHistory.size();
+}
+
+int main() {
+    vector&lt;float&gt; demandHistory = {150.0, 160.0, 155.0, 158.0};
+    cout &lt;&lt; "Predicted demand for next day: " &lt;&lt; predictDemand(demandHistory) &lt;&lt; " units." &lt;&lt; endl;
+    return 0;
+}</code></pre>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="section">
+            <h2>Case Study 2: Poor Waste Management</h2>
+            <h3>Background</h3>
+            <p>
+                Inefficient waste management practices are leading to pollution and health hazards. Overflowing bins, delayed collection, and lack of segregation exacerbate the problem.
+            </p>
+            <h3>Challenges Identified</h3>
+            <ul>
+                <li><strong>Delayed Collection:</strong> Inefficient scheduling causing overflowing bins.</li>
+                <li><strong>Segregation Issues:</strong> Lack of proper sorting at the source.</li>
+                <li><strong>Transportation Inefficiencies:</strong> Unoptimized routes for waste trucks.</li>
+            </ul>
+            <h3>Solution</h3>
+            <h4>1. Route Optimization</h4>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int findShortestPath(vector&lt;vector&lt;int&gt;&gt; &graph, int start, int end) {
+    vector&lt;int&gt; distance(graph.size(), INT_MAX);
+    distance[start] = 0;
+
+    for (int i = 0; i &lt; graph.size(); ++i) {
+        for (int u = 0; u &lt; graph.size(); ++u) {
+            for (int v = 0; v &lt; graph[u].size(); ++v) {
+                if (distance[u] + graph[u][v] &lt; distance[v]) {
+                    distance[v] = distance[u] + graph[u][v];
+                }
+            }
+        }
+    }
+
+    return distance[end];
+}
+
+int main() {
+    vector&lt;vector&lt;int&gt;&gt; graph = {{0, 1, 4}, {1, 0, 2}, {4, 2, 0}};
+    cout &lt;&lt; "Shortest path: " &lt;&lt; findShortestPath(graph, 0, 2) &lt;&lt; endl;
+    return 0;
+}</code></pre>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="section">
+            <h2>Case Study 3: Traffic Congestion in Urban Areas</h2>
+            <h3>Background</h3>
+            <p>
+                Rapid urbanization has led to increased traffic congestion, resulting in longer commutes, higher pollution levels, and reduced quality of life for residents.
+            </p>
+            <h3>Challenges Identified</h3>
+            <ul>
+                <li><strong>Peak Hour Traffic:</strong> High volume of vehicles during rush hours.</li>
+                <li><strong>Signal Timing:</strong> Inefficient traffic light management causing bottlenecks.</li>
+                <li><strong>Emergency Vehicles:</strong> Delayed response times due to traffic density.</li>
+            </ul>
+            <h3>Solution</h3>
+            <h4>1. Dynamic Signal Timing</h4>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+void adjustSignalTiming(vector&lt;int&gt; trafficDensity) {
+    for (int i = 0; i &lt; trafficDensity.size(); ++i) {
+        if (trafficDensity[i] &gt; 50) {
+            cout &lt;&lt; "Increase green light duration at junction " &lt;&lt; i &lt;&lt; endl;
+        } else {
+            cout &lt;&lt; "Decrease green light duration at junction " &lt;&lt; i &lt;&lt; endl;
+        }
+    }
+}
+
+int main() {
+    vector&lt;int&gt; trafficDensity = {30, 60, 45, 70};
+    adjustSignalTiming(trafficDensity);
+    return 0;
+}</code></pre>
+            <h4>2. Emergency Vehicle Routing</h4>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int findFastestRoute(vector&lt;vector&lt;int&gt;&gt; &graph, int start, int emergencyPoint) {
+    vector&lt;int&gt; distance(graph.size(), INT_MAX);
+    distance[start] = 0;
+
+    for (int i = 0; i &lt; graph.size(); ++i) {
+        for (int u = 0; u &lt; graph.size(); ++u) {
+            for (int v = 0; v &lt; graph[u].size(); ++v) {
+                if (distance[u] + graph[u][v] &lt; distance[v]) {
+                    distance[v] = distance[u] + graph[u][v];
+                }
+            }
+        }
+    }
+
+    return distance[emergencyPoint];
+}
+
+int main() {
+    vector&lt;vector&lt;int&gt;&gt; graph = {{0, 5, 10}, {5, 0, 3}, {10, 3, 0}};
+    cout &lt;&lt; "Fastest route time: " &lt;&lt; findFastestRoute(graph, 0, 2) &lt;&lt; " minutes." &lt;&lt; endl;
+    return 0;
+}</code></pre>
+        </div>
+    </div>
+
+</body>
+</html>
